@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+
+  app-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app-tracker
+    volumes:
+      - ./webservice:/usr/src/app
+    tty: true
+    ports:
+      - "8080:8080"
