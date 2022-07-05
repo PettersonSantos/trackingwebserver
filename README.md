@@ -6,6 +6,7 @@
 ## Technologies
 
 - Java 17 using springboot version 2.7.0
+- Docker and Docker-compose
 
 ## Setup
 
@@ -13,6 +14,12 @@
 
 ```bash
 $ mvn clean install
+```
+
+### Docker Stack
+
+```bash
+$ docker-compose up -d
 ```
 
 ### Run tests
