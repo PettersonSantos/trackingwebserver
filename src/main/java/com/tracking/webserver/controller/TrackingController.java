@@ -5,7 +5,7 @@ import com.tracking.webserver.service.TrackingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +18,7 @@ public class TrackingController {
     @Autowired
     private TrackingService service;
 
-    @PostMapping(path = Routes.PING)
+    @GetMapping(path = Routes.PING)
     public ResponseEntity<String> ping() {
         if (service.ping()) {
             return new ResponseEntity<>("OK",
@@ -28,7 +28,7 @@ public class TrackingController {
         }
     }
 
-    @PostMapping(path = Routes.IMG)
+    @GetMapping(path = Routes.IMG)
     public void img(HttpServletResponse response) throws IOException {
 
         byte[] trackingGif = service.img();
