@@ -30,3 +30,6 @@ service - Business layer
 
 # Final considerations
 - The service is running on ports 8080.
+- The Swagger is running on /swagger-ui
+
+![image](https://user-images.githubusercontent.com/55457627/177418793-d5837fab-fce4-4a0c-bc33-08a0ec0a57b9.png)
